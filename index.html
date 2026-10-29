@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="zh-CN"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>寒假工招聘 · 找寒假工，先看清楚再报名</title><link rel="stylesheet" href="css/style.css"></head>
+<body>
+<header class="top"><nav class="nav"><div class="logo">🧧 寒假<b>工</b>招聘</div>
+<a class="active" href="#" onclick="showList();return false;">找工作</a><a href="#" onclick="openApplyGeneric();return false;">我要报名</a><a href="#" onclick="showSafe();return false;">防骗提醒</a></nav></header>
+<main class="wrap">
+
+<!-- ===== 列表页（默认显示） ===== -->
+<div id="view-list">
+<section class="hero">
+<span class="pill">❄ 寒假工 · 本地原型 · 数据可替换</span>
+<h1>寒假打工，<span>薪资、食宿、工期</span><br>一眼看清楚。</h1>
+<p class="lead">搜一搜、筛一筛，点卡片进详情页（还是这个页面，不会新开网页、不会跳到别的 html），详情右下角点报名，也是同页切换。防骗提醒不在首页了，点导航栏“防骗提醒”才打开单独一页。12 个示例职位，换真实信息只改 <code>js/jobs.js</code>。</p>
+</section>
+
+<section class="search">
+<div><label>关键词</label><input id="q" placeholder="搜职位、城市、类型，如：分拣、深圳"></div>
+<div><label>类型</label><select id="type"><option>全部</option><option>工厂</option><option>物流</option><option>服务</option><option>教育</option><option>线上</option><option>其他</option></select></div>
+<div><label>城市</label><select id="city"><option>全部</option><option>深圳</option><option>广州</option><option>东莞</option><option>长沙</option><option>武汉</option><option>成都</option><option>郑州</option><option>杭州</option><option>线上</option></select></div>
+<div><label>排序</label><select id="sort"><option>默认</option><option>薪资从高到低</option><option>薪资从低到高</option></select></div>
+</section>
+
+<p id="count" class="muted"></p>
+<section id="list" class="grid g3"></section>
+
+</div>
+
+<!-- ===== 详情页（同页切换，不新开、不新建 html） ===== -->
+<div id="view-detail" style="display:none">
+<button class="backbtn" onclick="showList()">返回职位列表</button>
+<div id="detail-content"></div>
+</div>
+
+<!-- ===== 报名页（同页切换，不新开、不新建 html） ===== -->
+<div id="view-apply" style="display:none">
+<button class="backbtn" id="apply-back">返回工作详情</button>
+<div id="apply-content"></div>
+</div>
+
+<!-- ===== 防骗提醒页（同页切换，首页不再显示，点导航栏“防骗提醒”才展示） ===== -->
+<div id="view-safe" style="display:none">
+<button class="backbtn" onclick="showList()">返回职位列表</button>
+<section class="section" style="margin-top:0"><h2>防骗提醒，先看这 6 条</h2>
+<div class="grid g3">
+<div class="card"><h3>1. 不交钱</h3><p class="muted">押金、体检费、服装费、培训费，先交钱的先停下来核实。</p></div>
+<div class="card"><h3>2. 薪资写清楚</h3><p class="muted">时薪/日薪/月薪、计件规则、结算周期、扣款项，口头的不算。</p></div>
+<div class="card"><h3>3. 食宿问清楚</h3><p class="muted">包住包吃还是餐补，住宿条件、扣不扣住宿费，都要问。</p></div>
+<div class="card"><h3>4. 工期写清楚</h3><p class="muted">做到哪天、提前走扣不扣钱、春节怎么算，提前确认。</p></div>
+<div class="card"><h3>5. 留证据</h3><p class="muted">聊天记录、合同/协议、工资条、工作照，都留一份。</p></div>
+<div class="card"><h3>6. 换成真实信息</h3><p class="muted">这个站现在是示例数据，正式发布前把企业、联系方式换成真实的。</p></div>
+</div></section>
+</div>
+
+</main>
+<footer class="footer">寒假工招聘 · 本地 HTML 原型 · 双击 index.html 即可浏览 · 示例数据仅供演示<br>版本 20261029-1857</footer>
+<script src="js/jobs.js"></script><script src="js/main.js"></script></body></html>
